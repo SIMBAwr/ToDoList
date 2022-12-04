@@ -2,13 +2,13 @@
 
 #ifndef FUNCTIONS_H
 #define FUNCTIONS_H
+
 //#include <windows.h>
+
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <vector>
-#include <algorithm>
-#include <sstream>
 
 
 

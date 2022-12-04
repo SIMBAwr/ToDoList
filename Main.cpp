@@ -43,6 +43,10 @@ int main()
 		{
 			int index;
 
+			std::cout << std::endl;
+			ShowAllNotes();
+			std::cout << std::endl;
+
 			std::cout << "Удалить заметку под номером: ";
 			std::cin >> index;
 
@@ -76,20 +80,36 @@ int main()
 			std::cout << "Ключево слово для поиска: ";
 			std::cin >> str;
 
-			while (std::cout << "String: " && std::getline(std::cin, str) && !str.empty()) {
-				std::istringstream ist(str);
-				std::vector<std::string> vec;
-				std::copy(std::istream_iterator<std::string>(ist), std::istream_iterator<std::string>(), std::back_inserter(vec));
-				std::cout << "By words:" << std::endl;
-				std::copy(vec.begin(), vec.end(), std::ostream_iterator<std::string>(std::cout, "\n"));
-			}
-
-		
-			/*std::cout << std::endl;
+			std::cout << std::endl;
 			FindNote(str);
 			std::cout << std::endl;
-			system("pause");*/
+			system("pause");
 		}
 
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -71,7 +71,7 @@ void DeleteNote(int index)
 
 	std::ofstream osFile;
 
-	osFile.open("C:\\Users\\Даниил\\Desktop\\ToDoList.txt", std::ios::app);
+	osFile.open("C:\\Users\\Даниил\\Desktop\\ToDoList.txt");
 
 	if (!osFile.is_open())
 	{
@@ -187,31 +187,30 @@ void FindNote(std::string& str)
 
 	isFile.close();
 
-	
+
+	int counter = 0;
+
 	for (size_t i = 0; i < vectorFile.size(); i++)
 	{
-		int counter = 0;
-
 		for (size_t j = 0; j < vectorFile[i].size(); j++)
 		{
 			for (size_t t = 0; t < str.size(); t++)
 			{
-				if (vectorFile[i][j] == str[t])\
+				if (vectorFile[i][j] == str[t])
 				{
-					int
-					counter++;
-				}
-				else
-					counter = 0;
+					for (size_t c = j, r = 0; c < vectorFile[i].size(); c++, r++)
+					{
+							if (vectorFile[i][c] == str[r])
+								counter++;
+							else
+								break;
 
-				if (counter == str.size())
-				{
-					std::cout << vectorFile[i] << "\n";
+							if (counter == str.size())
+								std::cout << vectorFile[i] << "\n";
+					}
 				}
-
 			}
+			counter = 0;
 		}
 	}
-
-
 }
